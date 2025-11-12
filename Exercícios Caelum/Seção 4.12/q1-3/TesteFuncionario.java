@@ -1,6 +1,6 @@
 public class TesteFuncionario {
     public static void main(String[] args) {
-        Funcionario f1 = new Funcionario();
+        FuncionarioQ f1 = new FuncionarioQ();
 
         f1.nome = "Davi";
         f1.salario = 100;
