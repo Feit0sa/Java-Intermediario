@@ -4,9 +4,10 @@ public class TesteFuncionario {
 
         f1.nome = "Davi";
         f1.salario = 100;
+        f1.departamento = "SAC";
+        f1.dataDeEntrada = "14/05/2014";
         f1.recebeAumento(50);
 
-        System.out.println("Salario atual: " + f1.salario);
-        System.out.println("Ganho anual: " + f1.calculaGanhoAnual());
+        f1.mostra();
     }
 }
