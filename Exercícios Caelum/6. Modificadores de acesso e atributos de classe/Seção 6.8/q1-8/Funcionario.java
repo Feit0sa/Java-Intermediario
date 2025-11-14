@@ -1,0 +1,71 @@
+public class Funcionario {
+    private String nome;
+    private String departamento;
+    private double salario;
+    private Data dataDeEntrada = new Data();
+    static private int identificador = 0;
+
+    Funcionario() {
+        Funcionario.identificador += 1;
+    }
+
+    Funcionario(String nome) {
+        this();
+        this.nome = nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public void setDataDeEntrada(int dia, int mes, int ano) {
+        this.dataDeEntrada.dia = dia;
+        this.dataDeEntrada.mes = mes;
+        this.dataDeEntrada.ano = ano;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public String getDepartamento() {
+        return this.departamento;
+    }
+
+    public double getSalario() {
+        return this.salario;
+    }
+
+    public String getDataDeEntrada() {
+        return this.dataDeEntrada.formatada();
+    }
+
+    public int getId() {
+        return Funcionario.identificador;
+    }
+
+    void recebeAumento(double aumento) {
+        this.salario += aumento;
+    }
+
+    double getGanhoAnual() {
+        return this.salario*12;
+    }
+
+    void mostra() {
+        System.out.println("Nome: " + getNome());
+        System.out.println("ID: " + getId());
+        System.out.println("Departamento: " + getDepartamento());
+        System.out.println("Salário: " + getSalario());
+        System.out.println("Data de Entrada: " + getDataDeEntrada());
+        System.out.println("Ganho: " + getGanhoAnual());
+    }
+}
