@@ -18,7 +18,7 @@ public class Banco {
         }
     }
 
-    public int primeiraPosicaoLivre(Conta[] c) {
+    private int primeiraPosicaoLivre(Conta[] c) {
         int i = 0;
         while (i < c.length) {
             if (c[i] == null) return i;

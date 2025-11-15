@@ -33,7 +33,7 @@ public class TestaContas {
         }
 
         
-        for (int i = 0; i < banco.primeiraPosicaoLivre(banco.contas); i++) {
+        for (int i = 0; i < banco.getTotalDeContas(); i++) {
             System.out.println(banco.getConta(i));
             adc.roda(banco.contas[i]);
             System.out.println("");
