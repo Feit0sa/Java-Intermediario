@@ -33,13 +33,14 @@ public class TestaContas {
         }
 
         
-        for (int i = 0; i < banco.getTotalDeContas(); i++) {
+        for (int i = 0; banco.contas[i] != null; i++) {
             System.out.println(banco.getConta(i));
             adc.roda(banco.contas[i]);
             System.out.println("");
         }
 
-        System.out.println("Número de contas: " + banco.getTotalDeContas());
+        if (banco.getTotalDeContas() != -1) System.out.println("Número de contas: " + banco.getTotalDeContas());
+        else System.out.println("Número de contas: " + banco.contas.length);
 
     }
 }
