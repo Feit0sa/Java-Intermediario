@@ -25,6 +25,5 @@ public class TestaEmpresa {
         
         if (empresa.contem(andre)) System.out.println("André está na empresa");
         else System.out.println("André não está na empresa");
-
     }   
 }
