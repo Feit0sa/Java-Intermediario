@@ -32,6 +32,11 @@ public class Banco {
     }
 
     public int getTotalDeContas() {
-        return primeiraPosicaoLivre(this.contas);
+        int i = 0;
+        while (i < this.contas.length) {
+            if (this.contas[i] == null) return i;
+            i++;
+        }
+        return this.contas.length;
     }
 }

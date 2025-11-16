@@ -23,7 +23,7 @@ public class TestaContas {
 
         Banco banco = new Banco(10);
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 12; i++) {
             Conta c1 = new ContaCorrente();
             c1.deposita(1000*i);
             Conta c2 = new ContaPoupanca();
@@ -33,7 +33,7 @@ public class TestaContas {
         }
 
         
-        for (int i = 0; banco.contas[i] != null; i++) {
+        for (int i = 0; i < banco.getTotalDeContas(); i++) {
             System.out.println(banco.getConta(i));
             adc.roda(banco.contas[i]);
             System.out.println("");
